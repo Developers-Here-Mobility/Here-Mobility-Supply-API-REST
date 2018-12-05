@@ -432,12 +432,12 @@ The JSON representation for `UInt32Value` is JSON number.
 | ---- | ---- | ----------- | -------- |
 | supplier_id | string | Marketplace generated supplier id. | No |
 | ride_id | string | Marketplace generated ride id. | No |
-| eta_to_pickup | [v1UnixTime](#v1unixtime) | Updated estimated time till pickup.
+| eta_to_pickup | [v1UnixTime](#v1unixtime) | Updated estimated time (in epoch) until pickup.
 NOTE: DEPRECATED soon - please use eta_to_pickup_seconds. | No |
-| eta_to_destination | [v1UnixTime](#v1unixtime) | Updated estimated time till destination.
+| eta_to_destination | [v1UnixTime](#v1unixtime) | Updated estimated time (in epoch) until destination.
 NOTE: DEPRECATED soon - please use eta_to_destination_seconds. | No |
-| eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) | Updated estimated time till pickup in seconds. absolute time. | No |
-| eta_to_destination_seconds | [protobufUInt32Value](#protobufuint32value) | Updated estimated time till destination in seconds. absolute time. | No |
+| eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
+| eta_to_destination_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
 | update_id | string | Dispatcher-generated id which uniquely identifies this update. | No |
 | update_ts | dateTime | Dispatcher-generated timestamp which identifies the update time. | No |
 | environment_type | [v1EnvironmentType](#v1environmenttype) | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. | No |
@@ -461,15 +461,15 @@ NOTE: DEPRECATED soon - please use eta_to_destination_seconds. | No |
 | ride_id | string | Marketplace generated ride id. | No |
 | pickup | [commonv1Location](#commonv1location) | Updated pickup location. | No |
 | destination | [commonv1Location](#commonv1location) | Updated destination location. | No |
-| eta_to_pickup | [v1UnixTime](#v1unixtime) | Updated estimated time of arrival to pickup.
+| eta_to_pickup | [v1UnixTime](#v1unixtime) | Updated estimated time (in epoch) of arrival to pickup, time since epoch.
 NOTE: This field will be deprecated soon, please use eta_to_pickup_seconds instead. | No |
-| eta_to_destination | [v1UnixTime](#v1unixtime) | Updated estimated time of arrival to destination
+| eta_to_destination | [v1UnixTime](#v1unixtime) | Updated estimated time (in epoch) of arrival to destination.
 NOTE: This field will be deprecated soon, please use eta_to_destination_seconds instead. | No |
 | update_id | string | Dispatcher-generated id which uniquely identifies this update. | No |
 | update_ts | dateTime | Dispatcher-generated timestamp which identifies the update time. | No |
 | environment_type | [v1EnvironmentType](#v1environmenttype) | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. | No |
-| eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) | Updated estimated time till pickup in seconds. absolute time. | No |
-| eta_to_destination_seconds | [protobufUInt32Value](#protobufuint32value) | Updated estimated time till destination in seconds. absolute time. | No |
+| eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
+| eta_to_destination_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
 
 ### v1RidePriceUpdate  
 
@@ -479,6 +479,7 @@ NOTE: This field will be deprecated soon, please use eta_to_destination_seconds 
 | ride_id | string | Marketplace generated ride id. | No |
 | booking_estimated_price | [v1Price](#v1price) | Updated estimated price. | No |
 | actual_price | [v1Price](#v1price) | Updated actual price of the ride. | No |
+| is_final_price | boolean (boolean) | Marks the price as a final price. This price will be charged after the ride is completed. | No |
 | update_id | string | Dispatcher-generated id which uniquely identifies this update. | No |
 | update_ts | dateTime | Dispatcher-generated timestamp which identifies the update time. | No |
 | environment_type | [v1EnvironmentType](#v1environmenttype) | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. | No |
@@ -531,13 +532,13 @@ NOTE: This field will be deprecated soon, please use eta_to_destination_seconds 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | dispatcher_offer_id | string | Supplier generated unique offer ID. Relevant only for selectable offers. | No |
-| pickup_eta | [v1UnixTime](#v1unixtime) | Estimated pickup time.
+| pickup_eta | [v1UnixTime](#v1unixtime) | Estimated pickup time in epoch.
 NOTE: This field will be deprecated soon. please use pickup_eta_seconds instead. | No |
-| dropoff_eta | [v1UnixTime](#v1unixtime) | Estimated dropoff time.
+| dropoff_eta | [v1UnixTime](#v1unixtime) | Estimated dropoff time in epoch.
 NOTE: This field will be deprecated soon. please use estimated_ride_duration_seconds instead. | No |
 | booking_estimated_price | [v1Price](#v1price) | Estimated price. | No |
-| pickup_eta_seconds | [protobufUInt32Value](#protobufuint32value) | Estimated pickup time in seconds. absolute time. | No |
-| estimated_ride_duration_seconds | [protobufUInt32Value](#protobufuint32value) | Estimated dropoff time in seconds. absolute time. This is the time between pickup to dropoff. It does not contain the time to pickup. | No |
+| pickup_eta_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
+| estimated_ride_duration_seconds | [protobufUInt32Value](#protobufuint32value) |  | No |
 
 ### v1SimpleRideOffers  
 
@@ -590,6 +591,7 @@ RideStatus represents the different statuses a ride can be at.
  - DRIVER_EN_ROUTE: Drive started and driver is en-route.
  - AT_PICKUP: Driver is arrived at the pickup point, but passenger is not yet on board.
  - PASSENGER_ON_BOARD: Passenger is on board and drive to destination started.
+ - AT_DROPOFF: Driver has arrived to the dropoff point.
  - COMPLETED: Ride complete and passenger disembarked.
  - CANCELED: Ride is cancelled (due to supplier or due to demander).
 
@@ -603,6 +605,7 @@ RideStatus represents the different statuses a ride can be at.
  - DRIVER_EN_ROUTE: Drive started and driver is en-route.
  - AT_PICKUP: Driver is arrived at the pickup point, but passenger is not yet on board.
  - PASSENGER_ON_BOARD: Passenger is on board and drive to destination started.
+ - AT_DROPOFF: Driver has arrived to the dropoff point.
  - COMPLETED: Ride complete and passenger disembarked.
  - CANCELED: Ride is cancelled (due to supplier or due to demander). |  |
 
@@ -626,8 +629,9 @@ RideStatus represents the different statuses a ride can be at.
  - ACCEPTED: Supplier confirmed the ride, but driver is not yet allocated.
  - DRIVER_ASSIGNED: Driver is allocated, but ride has not yet started.
  - DRIVER_EN_ROUTE: Drive started and driver is en-route.
- - AT_PICKUP: Driver is arrived at the pickup point, but passenger is not yet on board.
+ - AT_PICKUP: Driver has arrived to the pickup point, but passenger is not yet on board.
  - PASSENGER_ON_BOARD: Passenger is on board and drive to destination started.
+ - AT_DROPOFF: Driver has arrived to the dropoff point.
  - COMPLETED: Ride complete and passenger disembarked.
  - CANCELED: Ride is cancelled (due to supplier or due to demander).
 
@@ -639,8 +643,9 @@ RideStatus represents the different statuses a ride can be at.
  - ACCEPTED: Supplier confirmed the ride, but driver is not yet allocated.
  - DRIVER_ASSIGNED: Driver is allocated, but ride has not yet started.
  - DRIVER_EN_ROUTE: Drive started and driver is en-route.
- - AT_PICKUP: Driver is arrived at the pickup point, but passenger is not yet on board.
+ - AT_PICKUP: Driver has arrived to the pickup point, but passenger is not yet on board.
  - PASSENGER_ON_BOARD: Passenger is on board and drive to destination started.
+ - AT_DROPOFF: Driver has arrived to the dropoff point.
  - COMPLETED: Ride complete and passenger disembarked.
  - CANCELED: Ride is cancelled (due to supplier or due to demander). |  |
 
