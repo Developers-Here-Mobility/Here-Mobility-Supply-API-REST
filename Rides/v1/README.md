@@ -417,7 +417,6 @@ The JSON representation for `UInt32Value` is JSON number.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) | Optional. Estimated number of seconds until pickup.
 For example: 60 seconds until the driver will pick you up
@@ -434,7 +433,6 @@ is mandatory. | No |
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | current_location | [v1Point](#v1point) | Mandatory. Updated location of the vehicle. | No |
 | update_id | string | Mandatory. Dispatcher-generated ID which uniquely identifies this update. | No |
@@ -446,7 +444,6 @@ Not yet supported.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | pickup | [commonv1Location](#commonv1location) | Optional. Updated pickup location.
 NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination is mandatory. | No |
@@ -461,7 +458,6 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | booking_estimated_price | [v1Price](#v1price) | Optional. Not yet supported. Updated ride estimated price. Currently not implemented. | No |
 | actual_price | [v1Price](#v1price) | Mandatory. Updated ride actual price. | No |
@@ -473,7 +469,6 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | prebook_pickup_time | [v1UnixTime](#v1unixtime) | Mandatory. New requested pickup time form the supplier. | No |
 | update_id | string | Mandatory. Dispatcher-generated ID which uniquely identifies this update. | No |
@@ -483,7 +478,6 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | vehicle | [v1Vehicle](#v1vehicle) | Optional. Updated vehicle details.
 NOTE: At least one of vehicle or driver is mandatory. | No |
@@ -528,7 +522,7 @@ For example: ride duration is 20 minutes (20*60 = 1200 seconds). | No |
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | offers | [ [v1SimpleRideOffer](#v1simplerideoffer) ] | Mandatory. A set of offers. | No |
-| sub_supplier_details | [v1Supplier](#v1supplier) | Optional. Details of the sub-supplier. Used only for aggregated suppliers. | No |
+| sub_supplier_details | [v1Supplier](#v1supplier) | * Optional. Details of the sub-supplier. Used only for aggregated suppliers. | No |
 
 ### v1Supplier
 
@@ -545,7 +539,6 @@ For example: ride duration is 20 minutes (20*60 = 1200 seconds). | No |
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | cancel_reason | string | Optional. Cancellation reason. | No |
 | cancel_reason_category | [SupplierCancelRideRequestSupplierCancelReasonCategory](#suppliercancelriderequestsuppliercancelreasoncategory) | Mandatory. Cancellation reason category. | No |
@@ -593,7 +586,6 @@ RideStatus represents the different statuses a ride can be at.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
-| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | status_code | [v1SupplierRideStatusUpdateRideStatus](#v1supplierridestatusupdateridestatus) | Mandatory. Current status of the ride. | No |
 | status_information | string | Optional. Additional information regarding the current state. | No |
