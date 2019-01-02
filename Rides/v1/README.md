@@ -240,6 +240,132 @@ Recommended to update only when there is a major change (1 minute at least)
  - CHANGED_MY_PLANS: Passenger changed plans.
  - OTHER_PASSENGER_CANCEL_REASON_CATEGORY: Other. |  |
 
+### PlacePlaceCategory
+
+ - RESTAURANT: An establishment that prepares and serves refreshments and prepared meals.
+ - COFFEE_TEA: An establishment that sells drinks, such as coffee and tea, as well as refreshments.
+ - NIGHTLIFE: An establishment that provides evening entertainment and usually serves alcoholic beverages.
+ - CINEMA: An establishment that shows movies through screen projection.
+ - CULTURE: An establishment where various types of performing arts are presented.
+ - GAMBLING_LOTTERY: An establishment that provides gambling entertainment.
+ - ATTRACTION: A designated area of special interest to tourists.
+ - MUSEUM: An establishment dedicated to the preservation and exhibition of artistic, historical, or scientific artifacts.
+ - RELIGIOUS_PLACE: An establishment of special religious significance or where religious services are held.
+ - WATER: A natural and geographical feature of the earth's surface that is covered with water, such as a lake, river, stream or ocean.
+ - MOUNTAIN: A natural and geographical feature that is higher than the surrounding land.
+ - UNDERSEA: Undersea attractions
+ - FOREST: A forest, heath or other vegetation
+ - GEOGRAPHICAL: Natural and geographical locations
+ - AIRPORT: A designated area that serves various aspects of aviation related sports, including gliders, recreational aircraft and model airplanes.
+ - PUBLIC_TRANSPORTATION: A facility for travelers who are travelling between stops on public transport.
+ - CARGO_TRANSPORTATION: A facility that handles some aspect of the transportation of cargo freight.
+ - REST_AREA: An establishment along a motorway (controlled access road) that provides restrooms and parking.
+ - HOTEL: A business that provides lodging or temporary living quarters.
+ - LODGE: A business that provides lodging to the public generally without room service.
+ - OUTDOORS: Public land preserved and maintained for recreational use.
+ - LEISURE: A park that contains rides and/or other entertainment which may be based on a central theme.
+ - CONVENIENCE_STORE: An establishment that sells groceries, candy, toiletries, soft drinks, tobacco products, newspapers and other products.
+ - SHOPPING_CENTER: A complex of businesses that are co-located and share common services.
+ - DEPARTMENT_STORE: A business that sells a wide variety of merchandise that is organized by product or service departments.
+ - FOOD_AND_DRINKS: A business that sells specialty products of a particular type of food or beverage.
+ - PHARMACY: A business that sells medications, toiletry items and other retail cosmetics.
+ - ELECTRONICS: A business that sells consumer electronics and electronic entertainment equipment.
+ - HARDWARE_HOUSE_GARDEN: A business that sells crafts, gardening, remodeling, or decorating items for the home.
+ - BOOKSTORE: A business that sells books, magazines and other reading material.
+ - CLOTHING_AND_ACCESSORIES: A business that sells apparel items, garments or fashion accessories for men, women, and children.
+ - STORE: A business that sells a variety of products targeted to consumers.
+ - HAIR_BEAUTY: A business that provides hair styling and personal appearance services. Places in this category may also sell hair products and other related cosmetic items.
+ - BANKING: Businesses that specialize in the maintenance, lending, exchange, or issuance of money.
+ - ATM: A computer terminal that allows bank customers to deposit, withdraw, or transfer funds without the assistance of a bank teller.
+ - MONEY_SERVICES: Businesses that provide money related services.
+ - MEDIA: Businesses that provide communication services.
+ - COMMERCIAL_SERVICES: Businesses that provide a service or product for use by other businesses.
+ - BUSINESS_INDUSTRY: Businesses that employ people in and around the city in which it is located.
+ - EMERGANCY_SERVICES: Municipal emergency services
+ - CONSUMER_SERVICES: An organization that provides consumer services for a variety of products for used by the public.
+ - POST_OFFICE: An office or station that receives, sorts, dispatches and delivers mail to a specific area or region.
+ - TOOURIST_INFORMATION: Businesses that provide a variety of information for visiting tourists, such as event schedules, lodging/accommodations, restaurants, attractions and more
+ - FEUL_STATION: Businesses that sell fuel for vehicles
+ - CAR_DEALER: Businesses that sell new automobiles and motorcycles.
+ - CAR_REPAIR: Businesses that provide automotive repair services.
+ - CAR_RENTAL: Businesses that rent or lease automobiles.
+ - TRUCK_SERVICES: Business that sell or service trucks and tractor trailers.
+ - HEALTH_CARE: Facilities that include dental offices, hospitals, nursing homes and other health care-related services.
+ - GOVERNMENT: A Place where government services are provided.
+ - EDUCATION: Facilities that are used for educational purposes including primary schooling, secondary schooling, universities and more.
+ - LIBRARY: Facilities that offer books, periodicals, audio, video and other material for public use.
+ - EVENTS: An area or facility used for the hosting of fairs and conventions.
+ - PARKING: Area or building used for parking cars
+ - SPORTS: A facility used for individual and team sports including recreational sports.
+ - FACILITIES: Facilities with miscellaneous uses such as Clubhouses, Offices, and Registration Offices.
+ - CITY: Represents a named settlement that may be a (large) city, town, or tiny village
+ - OUTDOORS_COMPLEX: Outdoor areas or complexes with designations for specific businesses or interests.
+ - BUILDING: Areas and buildings designated for residential or office use
+ - ADMINISTRATIVE_REGION: An administrative region, such as a postal area, or a named street/square/intersection.
+
+| Name | Type | Description | Required |
+| ---- | ---- | ----------- | -------- |
+| PlacePlaceCategory | string |  - RESTAURANT: An establishment that prepares and serves refreshments and prepared meals.
+ - COFFEE_TEA: An establishment that sells drinks, such as coffee and tea, as well as refreshments.
+ - NIGHTLIFE: An establishment that provides evening entertainment and usually serves alcoholic beverages.
+ - CINEMA: An establishment that shows movies through screen projection.
+ - CULTURE: An establishment where various types of performing arts are presented.
+ - GAMBLING_LOTTERY: An establishment that provides gambling entertainment.
+ - ATTRACTION: A designated area of special interest to tourists.
+ - MUSEUM: An establishment dedicated to the preservation and exhibition of artistic, historical, or scientific artifacts.
+ - RELIGIOUS_PLACE: An establishment of special religious significance or where religious services are held.
+ - WATER: A natural and geographical feature of the earth's surface that is covered with water, such as a lake, river, stream or ocean.
+ - MOUNTAIN: A natural and geographical feature that is higher than the surrounding land.
+ - UNDERSEA: Undersea attractions
+ - FOREST: A forest, heath or other vegetation
+ - GEOGRAPHICAL: Natural and geographical locations
+ - AIRPORT: A designated area that serves various aspects of aviation related sports, including gliders, recreational aircraft and model airplanes.
+ - PUBLIC_TRANSPORTATION: A facility for travelers who are travelling between stops on public transport.
+ - CARGO_TRANSPORTATION: A facility that handles some aspect of the transportation of cargo freight.
+ - REST_AREA: An establishment along a motorway (controlled access road) that provides restrooms and parking.
+ - HOTEL: A business that provides lodging or temporary living quarters.
+ - LODGE: A business that provides lodging to the public generally without room service.
+ - OUTDOORS: Public land preserved and maintained for recreational use.
+ - LEISURE: A park that contains rides and/or other entertainment which may be based on a central theme.
+ - CONVENIENCE_STORE: An establishment that sells groceries, candy, toiletries, soft drinks, tobacco products, newspapers and other products.
+ - SHOPPING_CENTER: A complex of businesses that are co-located and share common services.
+ - DEPARTMENT_STORE: A business that sells a wide variety of merchandise that is organized by product or service departments.
+ - FOOD_AND_DRINKS: A business that sells specialty products of a particular type of food or beverage.
+ - PHARMACY: A business that sells medications, toiletry items and other retail cosmetics.
+ - ELECTRONICS: A business that sells consumer electronics and electronic entertainment equipment.
+ - HARDWARE_HOUSE_GARDEN: A business that sells crafts, gardening, remodeling, or decorating items for the home.
+ - BOOKSTORE: A business that sells books, magazines and other reading material.
+ - CLOTHING_AND_ACCESSORIES: A business that sells apparel items, garments or fashion accessories for men, women, and children.
+ - STORE: A business that sells a variety of products targeted to consumers.
+ - HAIR_BEAUTY: A business that provides hair styling and personal appearance services. Places in this category may also sell hair products and other related cosmetic items.
+ - BANKING: Businesses that specialize in the maintenance, lending, exchange, or issuance of money.
+ - ATM: A computer terminal that allows bank customers to deposit, withdraw, or transfer funds without the assistance of a bank teller.
+ - MONEY_SERVICES: Businesses that provide money related services.
+ - MEDIA: Businesses that provide communication services.
+ - COMMERCIAL_SERVICES: Businesses that provide a service or product for use by other businesses.
+ - BUSINESS_INDUSTRY: Businesses that employ people in and around the city in which it is located.
+ - EMERGANCY_SERVICES: Municipal emergency services
+ - CONSUMER_SERVICES: An organization that provides consumer services for a variety of products for used by the public.
+ - POST_OFFICE: An office or station that receives, sorts, dispatches and delivers mail to a specific area or region.
+ - TOOURIST_INFORMATION: Businesses that provide a variety of information for visiting tourists, such as event schedules, lodging/accommodations, restaurants, attractions and more
+ - FEUL_STATION: Businesses that sell fuel for vehicles
+ - CAR_DEALER: Businesses that sell new automobiles and motorcycles.
+ - CAR_REPAIR: Businesses that provide automotive repair services.
+ - CAR_RENTAL: Businesses that rent or lease automobiles.
+ - TRUCK_SERVICES: Business that sell or service trucks and tractor trailers.
+ - HEALTH_CARE: Facilities that include dental offices, hospitals, nursing homes and other health care-related services.
+ - GOVERNMENT: A Place where government services are provided.
+ - EDUCATION: Facilities that are used for educational purposes including primary schooling, secondary schooling, universities and more.
+ - LIBRARY: Facilities that offer books, periodicals, audio, video and other material for public use.
+ - EVENTS: An area or facility used for the hosting of fairs and conventions.
+ - PARKING: Area or building used for parking cars
+ - SPORTS: A facility used for individual and team sports including recreational sports.
+ - FACILITIES: Facilities with miscellaneous uses such as Clubhouses, Offices, and Registration Offices.
+ - CITY: Represents a named settlement that may be a (large) city, town, or tiny village
+ - OUTDOORS_COMPLEX: Outdoor areas or complexes with designations for specific businesses or interests.
+ - BUILDING: Areas and buildings designated for residential or office use
+ - ADMINISTRATIVE_REGION: An administrative region, such as a postal area, or a named street/square/intersection. |  |
+
 ### SupplierCancelRideRequestSupplierCancelReasonCategory
 
 - UNKNOWN_SUPPLIER_CANCEL_REASON_CATEGORY: Unknown cancellation category.
@@ -395,7 +521,7 @@ The JSON representation for `UInt32Value` is JSON number.
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | name | string | Optional. The place's name. | No |
-| category | string | Optional. The place's category (e.g.: Airport, Restaurant, Park, etc.). | No |
+| category | [PlacePlaceCategory](#placeplacecategory) | Optional. The place's category (e.g.: Airport, Restaurant, Park, etc.). | No |
 
 ### v1Point
 
@@ -417,6 +543,7 @@ The JSON representation for `UInt32Value` is JSON number.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | eta_to_pickup_seconds | [protobufUInt32Value](#protobufuint32value) | Optional. Estimated number of seconds until pickup.
 For example: 60 seconds until the driver will pick you up
@@ -433,6 +560,7 @@ is mandatory. | No |
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | current_location | [v1Point](#v1point) | Mandatory. Updated location of the vehicle. | No |
 | update_id | string | Mandatory. Dispatcher-generated ID which uniquely identifies this update. | No |
@@ -444,6 +572,7 @@ Not yet supported.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | pickup | [commonv1Location](#commonv1location) | Optional. Updated pickup location.
 NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination is mandatory. | No |
@@ -458,6 +587,7 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | booking_estimated_price | [v1Price](#v1price) | Optional. Not yet supported. Updated ride estimated price. Currently not implemented. | No |
 | actual_price | [v1Price](#v1price) | Mandatory. Updated ride actual price. | No |
@@ -469,6 +599,7 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | prebook_pickup_time | [v1UnixTime](#v1unixtime) | Mandatory. New requested pickup time form the supplier. | No |
 | update_id | string | Mandatory. Dispatcher-generated ID which uniquely identifies this update. | No |
@@ -478,6 +609,7 @@ NOTE: At least one of pickup, destination, eta_to_pickup and eta_to_destination 
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | vehicle | [v1Vehicle](#v1vehicle) | Optional. Updated vehicle details.
 NOTE: At least one of vehicle or driver is mandatory. | No |
@@ -522,7 +654,7 @@ For example: ride duration is 20 minutes (20*60 = 1200 seconds). | No |
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | offers | [ [v1SimpleRideOffer](#v1simplerideoffer) ] | Mandatory. A set of offers. | No |
-| sub_supplier_details | [v1Supplier](#v1supplier) | * Optional. Details of the sub-supplier. Used only for aggregated suppliers. | No |
+| sub_supplier_details | [v1Supplier](#v1supplier) | Optional. Details of the sub-supplier. Used only for aggregated suppliers. | No |
 
 ### v1Supplier
 
@@ -539,6 +671,7 @@ For example: ride duration is 20 minutes (20*60 = 1200 seconds). | No |
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | cancel_reason | string | Optional. Cancellation reason. | No |
 | cancel_reason_category | [SupplierCancelRideRequestSupplierCancelReasonCategory](#suppliercancelriderequestsuppliercancelreasoncategory) | Mandatory. Cancellation reason category. | No |
@@ -586,6 +719,7 @@ RideStatus represents the different statuses a ride can be at.
 
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
+| supplier_id | string | Mandatory. Marketplace generated supplier ID. | No |
 | ride_id | string | Mandatory. Marketplace generated ride ID. | No |
 | status_code | [v1SupplierRideStatusUpdateRideStatus](#v1supplierridestatusupdateridestatus) | Mandatory. Current status of the ride. | No |
 | status_information | string | Optional. Additional information regarding the current state. | No |
